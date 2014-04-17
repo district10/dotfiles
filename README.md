@@ -1,7 +1,7 @@
-sys_config
-==========
+DOT FILES
+=========
 
-Some configuration, emacs, awesome, etc
+- some configuration, emacs, awesome, etc
 
 
 ### [Awesome](http://awesome.naquadah.org/wiki/Main_Page)
