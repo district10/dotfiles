@@ -36,11 +36,6 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
-;; Auto generate right paren, bracket, brace
-(electric-pair-mode 1)
-
-;; My Keybinding Configurations
-(require 'key-bindings) ;; More-Funcs inside
 
 ;; Cross Hair
 ;;(require 'crosshairs)
@@ -48,6 +43,34 @@
 ;; Code Folding
 (load "folding" 'nomessage 'noerror) ;; I use C-c C-f as the prefix, instead of C-c @
 (folding-mode-add-find-file-hook)
+
+
+;; Abbrevs
+(load "abbrevs")
+
+
+;; My Keybinding Configurations
+(require 'key-bindings) ;; More-Funcs inside
+
+
+;; Set Variables
+(recentf-mode 1) ; Keep A List Of Recently Opened Files
+(electric-pair-mode 1) ; Auto generate right paren, bracket, brace
+(show-paren-mode 1)
+(setq show-paren-style 'expression) ; Highlight Entire Bracket Expression
+
+(setq electric-pair-pairs '(
+                            (?\@ . ?\#)
+                            ))
+
+
+
+;; Misc
+(require 'page-break-lines)
+(turn-on-page-break-lines-mode)
+
+
+ 
 
 
 

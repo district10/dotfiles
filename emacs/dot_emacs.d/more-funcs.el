@@ -1,5 +1,7 @@
-
 ;; ############################################################################
+;; ## MORE FUNCTIONS 
+;; ############################################################################
+
 (defun toggle-letter-case ()
   "Toggle the letter case of current word or text selection.
 Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
@@ -108,9 +110,12 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
 
 
 
+;; ############################################################################
 
-
-
+(defun gnat ()
+  (interactive)
+  (insert "{}")
+  (backward-char 1))
 
 
 

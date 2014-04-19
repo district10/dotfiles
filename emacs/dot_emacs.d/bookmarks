@@ -1,0 +1,20 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("cross"
+ (filename . "~/Desktop/district10/dotfiles/emacs/dot_emacs.d/plugins/crosshairs.el")
+ (front-context-string . ";;; crosshairs.e")
+ (rear-context-string)
+ (position . 1))
+("crosshairs.el"
+ (filename . "~/Desktop/district10/dotfiles/emacs/dot_emacs.d/plugins/crosshairs.el")
+ (front-context-string . ";;; crosshairs.e")
+ (rear-context-string)
+ (position . 1))
+("key-bindings"
+ (filename . "~/Desktop/district10/dotfiles/emacs/dot_emacs.d/key-bindings.el")
+ (front-context-string . ";;--------------")
+ (rear-context-string)
+ (position . 1))
+)
