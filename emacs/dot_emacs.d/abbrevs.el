@@ -3,54 +3,50 @@
 (define-abbrev-table 'global-abbrev-table '(
 
     ;; math/unicode symbols
-    ("8in" "∈")
-    ("8nin" "∉")
-    ("8inf" "∞")
-    ("8luv" "♥")
-    ("8smly" "☺")
+;;    ("2in" "∈")
+;;    ("2nin" "∉")
+;;    ("2inf" "∞")
+;;    ("2luv" "♥")
+;;    ("2smly" "☺")
 
-    ;; email
-    ("8me" "gnat_tang@yeah.net")
+    ;; About Me
+    ("2im" "gnat_tang@yeah.net")
+    ("2in" "Gnat TANG")
+    ("2ic" "GIS_RS_WHU")
 
     ;; computing tech
-    ("8wp" "Wikipedia")
-    ("8ms" "Microsoft")
-    ("8g" "Google")
-    ("8it" "IntelliType")
-    ("8msw" "Microsoft Windows")
-    ("8win" "Windows")
-    ("8ie" "Internet Explorer")
-    ("8ahk" "AutoHotkey")
+    ("2wp" "Wikipedia")
+    ("2ms" "Microsoft")
+    ("2gg" "Google")
+    ("2it" "IntelliType")
+    ("2ms" "Microsoft Windows")
+    ("2win" "Windows")
+    ("2ie" "Internet Explorer")
+
 
     ;; normal english words
-    ("8alt" "alternative")
-    ("8char" "character")
-    ("8def" "definition")
-    ("8bg" "background")
-    ("8kb" "keyboard")
-    ("8ex" "example")
-    ("8kbd" "keybinding")
-    ("8env" "environment")
-    ("8var" "variable")
-    ("8ev" "environment variable")
-    ("8cp" "computer")
-
-    ;; signature
-    ("8xl" "Xah Lee")
-
-    ;; url
-    ("8uxl" "http://xahlee.info/")
+    ("2alt" "alternative")
+    ("2char" "character")
+    ("2def" "definition")
+    ("2bg" "background")
+    ("2kb" "keyboard")
+    ("2ex" "example")
+    ("2kbd" "keybinding")
+    ("2env" "environment")
+    ("2var" "variable")
+    ("2ev" "environment variable")
+    ("2cp" "computer")
 
     ;; emacs regex
-    ("8d" "\\([0-9]+?\\)")
-    ("8str" "\\([^\"]+?\\)\"")
+    ("2d" "\\([0-9]+?\\)")
+    ("2str" "\\([^\"]+?\\)\"")
 
     ;; shell commands
-    ("8ditto" "ditto -ck --sequesterRsrc --keepParent src dest")
-    ("8im" "convert -quality 85% ")
+    ("2ditto" "ditto -ck --sequesterRsrc --keepParent src dest")
+    ("2im" "convert -quality 85% ")
 
-    ("8f0" "find . -type f -size 0 -exec rm {} ';'")
-    ("8rsync" "rsync -z -r -v -t --exclude=\"*~\" --exclude=\".DS_Store\" --exclude=\".bash_history\" --exclude=\"**/xx_xahlee_info/*\"  --exclude=\"*/_curves_robert_yates/*.png\" --exclude=\"logs/*\"  --exclude=\"xlogs/*\" --delete --rsh=\"ssh -l xah\" ~/web/ xah@example.com:~/")
+    ("2f0" "find . -type f -size 0 -exec rm {} ';'")
+    ("2rsync" "rsync -z -r -v -t --exclude=\"*~\" --exclude=\".DS_Store\" --exclude=\".bash_history\" --exclude=\"**/xx_xahlee_info/*\"  --exclude=\"*/_curves_robert_yates/*.png\" --exclude=\"logs/*\"  --exclude=\"xlogs/*\" --delete --rsh=\"ssh -l xah\" ~/web/ xah@example.com:~/")
     ))
 
 ;; stop asking whether to save newly added abbrev when quitting emacs
