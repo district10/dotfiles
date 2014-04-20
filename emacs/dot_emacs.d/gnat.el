@@ -64,7 +64,7 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/")
 (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet/")
 (add-to-list 'load-path "~/.emacs.d/plugins/expand-region/")
-
+(add-to-list 'load-path "~/.emacs.d/plugins/evil")
 
 
 
@@ -82,8 +82,6 @@
                       (insert ?-)
                     (funcall ,ido-cannot-complete-command)))))
           ad-do-it)) ;;; Emacs is so great! so is the cummunity.
-
-
 
 ;; Vcursor
 (setq vcursor-key-bindings 't)
@@ -192,6 +190,14 @@
 ;; typopunct
 (require 'typopunct)
 (typopunct-change-language 'english t)
+
+(require 'undo-tree)
+
+
+(require 'evil)
+;;(evil-mode 1)
+
+
 
 
 
