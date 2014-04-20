@@ -1,19 +1,19 @@
 DOT FILES
 =========
 
- - some configuration, emacs, awesome, etc
- - Keybindings are customized to suid [neo-extended dvpe keyboard layout][neo-dvpe]
+ - Some configuration, emacs, awesome, etc
+ - Keybindings are customized to suit [neo-extended dvpe keyboard layout][neo-dvpe]
+
 
 ### [Awesome][awesome]
  
- - Shortcuts designed for dvpe
+ - Not use it often these days
+
 
 ### [Emacs][emacs]
+
  - I get more and more skilled at using emacs! Really fantastic.
 
-
-### Misc
-   - Keyboard layout, [neo-extended  dvpe](https://github.com/district10/neo_keyboard_layout)
 
 
 
