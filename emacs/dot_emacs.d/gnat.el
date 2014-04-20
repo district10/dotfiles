@@ -50,13 +50,6 @@
 
 
 
-
-
-
-
-
-
-
 ;; Add Some Load Path
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/themes/")
@@ -127,12 +120,12 @@
           (goto-line . jump)
           (indent-for-tab-command . ignore)
           (undo . ignore)))
-  (setq auto-mark-command-classifiers
+(setq auto-mark-command-classifiers
         (list (lambda (command)
                 (if (and (eq command 'self-insert-command)
                          (eq last-command-char ? ))
                     'ignore))))
-  (global-auto-mark-mode 1))
+(global-auto-mark-mode 1))
 
 (setq show-paren-priority 999)
 (set-face-background 'region nil)
@@ -148,7 +141,7 @@
 (turn-on-page-break-lines-mode)
 
 
-;; One Of The Chromium Plugins
+;; One Of The Best Chromium Plugins
 (require 'edit-server)
 (edit-server-start)
 
@@ -182,6 +175,7 @@
 ;; typopunct
 (require 'typopunct)
 (typopunct-change-language 'english t)
+
 
 (require 'undo-tree)
 
