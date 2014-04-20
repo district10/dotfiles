@@ -6,7 +6,10 @@
 
 ;; Load More Funcs
 ;; ===============
+(add-to-list 'load-path "~/.emacs.d/plugins/")
 (require 'more-funcs)
+(require 'switch-window)
+
 ;;(load 'symbols)
 
 ;; Navigation
@@ -28,6 +31,8 @@
 (global-set-key (kbd "M-v") 'query-replace-regexp)
 
 (global-set-key (kbd "C-c d") 'insert-date) ;; "C-c d", "C-u C-c d" and "C-u C-u C-c d"
+(global-set-key (kbd "C-x o") 'switch-window)
+
 (global-set-key (kbd "\C-x\C-b") 'buffer-menu-other-window)  ;;  No need to "C-o" to switch anymore
 (global-set-key (kbd "\C-c\C-gl") 'goto-line)
 (global-set-key (kbd "\C-c\C-gc") 'goto-char)

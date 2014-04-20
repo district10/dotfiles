@@ -1,4 +1,6 @@
-((("undo-tree" .
+((("switch-window" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("undo-tree" .
    [0 0 0 0 1 0 0 0 0])
   ("typopunct" .
    [0 0 0 0 1 0 0 0 0])
@@ -295,9 +297,9 @@
   ("test" .
    [5 0 0 0])
   ("require" .
-   [13 0 0 0 0 0 0])
+   [14 0 0 0 0 0 0])
   ("add-to-list" .
-   [0 0 0 1 0 0 0 0 0 0 1])
+   [0 0 0 2 0 0 0 0 0 0 1])
   ("load-path" .
    [1 0 0 0 1 0 0 0 0])
   ("~/.emacs.d/themes/solarized/" .
