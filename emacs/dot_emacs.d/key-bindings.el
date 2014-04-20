@@ -20,7 +20,7 @@
 ;; More
 ;; ====
 (global-set-key (kbd "C-s") 'toggle-letter-case) ;; case-conversion(word), region see F8
-(global-set-key (kbd "C-t") 'set-mark-command)
+(global-set-key (kbd "C-=") 'set-mark-command) ;; C-t -> expand-region
 (global-set-key (kbd "C-r") 'backward-word) ;; Move Left One Word
 (global-set-key (kbd "C-d") 'kill-word) ;; Then Delete It
 (global-set-key (kbd "C-b") 'undo)

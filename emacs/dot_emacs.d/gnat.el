@@ -7,9 +7,9 @@
 ;; Created: Sun Apr 20 08:24:07 2014 (+0800)
 ;; Version:
 ;; Package-Requires: ()
-;; Last-Updated: Sun Apr 20 08:24:49 2014 (+0800)
+;; Last-Updated: Sun Apr 20 11:09:23 2014 (+0800)
 ;;           By: root
-;;     Update #: 2
+;;     Update #: 3
 ;; URL:
 ;; Doc URL:
 ;; Keywords:
@@ -167,7 +167,7 @@
 
 ;; expand region
 (require 'expand-region)
-(global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-t") 'er/expand-region)
 
 
 ;;
@@ -186,18 +186,12 @@
 (add-hook 'emacs-lisp-mode-hook 'auto-make-header)
 (add-hook 'c-mode-hook 'auto-make-header)
 
-
+;; goto-last-change
 (require 'goto-last-change) ;; seems great
 
-
-
-
-
-
-
-
-
-
+;; typopunct
+(require 'typopunct)
+(typopunct-change-language 'english t)
 
 
 
