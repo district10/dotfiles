@@ -1,4 +1,8 @@
-((("insert-random-number" .
+((("goto-last-change" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("edit-server" .
+   [0 0 0 0 0 0 0 0 1 0 0])
+  ("insert-random-number" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("upcase-region" .
    [0 0 0 0 1 0 1 0 0 0 0 0 0])
@@ -149,7 +153,7 @@
   ("add-to-list" .
    [0 0 0 1 0 0 0 0 0 0 1])
   ("require" .
-   [10 0 0 0 0 0 0])
+   [13 0 0 0 0 0 0])
   ("test" .
    [5 0 0 0])
   ("stop" .
@@ -439,4 +443,8 @@
   ("downcase-region" .
    [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
   ("capitalize-region" .
-   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])))
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("edit-server-start" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("header2" .
+   [0 0 0 0 0 0 1])))
