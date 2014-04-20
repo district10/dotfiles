@@ -142,17 +142,6 @@
 (require 'key-bindings) ;; More-Funcs inside
 
 
-;; Set Variables
-(recentf-mode 1) ; Keep A List Of Recently Opened Files
-(electric-pair-mode 1) ; Auto generate right paren, bracket, brace
-(show-paren-mode 1)
-(setq show-paren-style 'expression) ; Highlight Entire Bracket Expression
-
-(setq electric-pair-pairs '(
-                            (?\@ . ?\#)
-                            ))
-
-
 
 ;; Misc
 (require 'page-break-lines)
@@ -169,12 +158,15 @@
 
 
 ;;
-(require 'window-numbering)
-(window-numbering-mode 1)
-
-
-;;
 (require 'flymake)
+(autoload 'flymake-find-file-hook "flymake" "" t)
+(add-hook 'find-file-hook 'flymake-find-file-hook)
+(setq flymake-gui-warnings-enabled nil)
+(setq flymake-log-level 0)
+
+
+
+
 
 ;;
 (require 'line-comment-banner)
@@ -199,6 +191,17 @@
 
 
 
+;; Set Variables
+(recentf-mode 1) ; Keep A List Of Recently Opened Files
+(electric-pair-mode 1) ; Auto generate right paren, bracket, brace
+(show-paren-mode 1)
+(setq show-paren-style 'expression) ; Highlight Entire Bracket Expression
+
+(setq electric-pair-pairs '(
+                            (?\@ . ?\#)
+                            ))
+;;(setq column-number-mode t) 
+;;(setq-default fill-column 40)
 
 
 
