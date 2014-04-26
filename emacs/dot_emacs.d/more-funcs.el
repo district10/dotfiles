@@ -118,12 +118,15 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
   (backward-char 1))
 
 
+(defun gat ()
+  "toggle between Gat and no input method"
+  (interactive)
 
-
-
-
-
-
+  (progn
+    (require 'gat-eim)
+    (if (string= current-input-method "gat-input-method")
+	(set-input-method nil)
+      (set-input-method "gat-input-method"))))
 
 
 (provide 'more-funcs)
