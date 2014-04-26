@@ -111,7 +111,19 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
 ;; ############################################################################
 
 ;; Gat, My own chinese input method
-(require 'gat-eim)
+
+
+
+(defun gat ()
+  "toggle between Gat and no input method"
+  (interactive)
+    (if (string= current-input-method "gat-input-method")
+	(set-input-method nil)
+      (set-input-method "gat-input-method")))
+
+
+
+
 
 
 

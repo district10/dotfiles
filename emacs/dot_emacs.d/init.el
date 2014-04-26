@@ -155,8 +155,8 @@
 (setq flymake-gui-warnings-enabled nil)
 (setq flymake-log-level 0)
 
-
-
+;; My Emacs Input Method
+(require 'gat-eim)
 
 
 ;;
