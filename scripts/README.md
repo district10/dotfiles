@@ -45,11 +45,24 @@
 发展 [ex][tsm]
 ```
 
+- gat-trans-pretty.sh
 
+```
+➜  scripts git:(master) ✗ ./gat-trans-pretty.sh     example4.txt
+早饭时隔壁桌的男人边吃边对着前面的空椅子说话，谈笑风生，不时起身伸过勺子送去食物，喂空气，好像哑剧。
+[5hre][5cin][2s][5mht][5aco][5umx][i][4id][u][5irh][3aq][5irh][2r][3ik][3su][3rh][i][4te][5tua][3rx][3ar][4mk]，[5iri][5rem][5tit][2c]，[x][2s][3lx][4xc][5itx][3ic][5uts][3rx][3gq][3rr][5ose][3ra]，[5suk][4te][4ao]，[3xa][5ron][5rru][4ab]。
+我示意同桌看看，同桌说，神神叨叨，估计吃药的时候忘记开灯了。
+[q][4eu][3sk][3hr][5umx][3sl][3sl]，[3hr][5umx][3ar]，[4ti][4ti][5xar][5xar]，[4wj][3sr][3aq][5isa][i][2s][5nor][5txm][4lk][3nu][5ork][n]。
+我哈哈大笑，两人边欣赏那男人的表演边评头论足，不亦乐乎。可能太过喧闹惊动了对方，他居然放下餐具径直冲我们走来。
+[q][4yv][4yv][g][5rem]，[3nr][u][5irh][5kca][5ili][3sh][4id][u][i][3ao][3pv][5irh][3ps][4ia][3hk][5ete]，[x][4jr][3pd][5arh]。[2a][2i][5ret][3ic][5lle][5reo][4mq][3il][n][2r][3ir]，[p][3qn][3ro][4ih][3ur][5ali][4rk][4uj][4so][3oq][q][y][5ise][2l]。
+```
 
+- gat-trans-pretty2.sh
 
-
-
+```
+➜  scripts git:(master) ✗ ./gat-trans-pretty2.sh "我跟你开玩笑干嘛, gat 输入法完虐拼音五笔"
+{我q}{跟4pt}{你3oo}{开3nu}{玩5inx}{笑5rem}{干4mr}{嘛5iea},gat{输3jv}{入3ls}{法2b}{完4ci}{虐5nax}{拼5oas}{音3lj}{五4mi}{笔4iy}
+```
 
 ---
 
