@@ -1,10 +1,13 @@
 这里有一些脚本
 ===========
 
----
-### gat-trans系列用于转换汉字到gat键码
 
-- gat-trans
+
+---
+
+### gat-trans 系列用于转换汉字到 gat 键码
+
+- gat-trans.sh
 
 ```
 ➜  scripts git:(master) ✗ ./gat-trans.sh example4.txt 
@@ -16,7 +19,7 @@
 [q][etyv][etyv][g][terem]，[tnr][u][teirh][tekca][teili][tsh][etid][u][i][tao][tpv][teirh][tps][etia][thk][teete]，[x][etjr][tpd][tearh]。[ea][ei][teret][tic][telle][tereo][etmq][til][n][er][tir]，[p][tqn][tro][etih][tur][teali][etrk][etuj][etso][toq][q][y][teise][el]。
 ```
 
-- gat-trans2
+- gat-trans2.sh
 
 ```
 ➜  scripts git:(master) ✗ ./gat-trans2.sh "你的就是我的，我的还是我的" 
@@ -24,10 +27,33 @@
 ```
 
 
+- gat-trans3.sh 
+
+```
+➜  bigrams git:(master) ✗ head -3 news.txt         
+1	中国	53185	4.69339339612	53185
+2	美国	31840	5.19176188171	85025
+3	发展	26535	7.14269896701	111560
+➜  bigrams git:(master) ✗ head -3 news.txt | awk '{print $2}' 
+中国
+美国
+发展
+➜  bigrams git:(master) ✗ head -3 news.txt | awk '{print $2}' > demo.txt
+➜  scripts git:(master) ✗ ./gat-trans3.sh  demo.txt
+中国 [m][r]
+美国 [tli][r]
+发展 [ex][tsm]
+```
+
+
+
+
+
 
 
 ---
-### dvpe2 系列用于把dvpe转化成dvp，qwerty
+
+### dvpe2* 系列用于把dvpe转化成dvp，qwerty
 
 - 即：
 
@@ -45,6 +71,28 @@
 ➜  scripts git:(master) ✗ ./gat-trans2.sh "你的就是我的，我的还是我的" | ./dvpe2dvp.sh
 {你too}{的u}{就ev}{是a}{我q}{的u}，{我q}{的u}{还tcx}{是a}{我q}{的u}
 
+```
+
+
+---
+
+### keyvalue2quail.sh 
+
+- From Key-Value Table to Emacs Quail El Package
+
+```
+➜  scripts git:(master) ✗ head -n 3 data/gat-key-value-6000.dvp.txt                                                   
+u 的
+o 一
+a 是
+➜  scripts git:(master) ✗ head -n 3 data/gat-key-value-6000.dvp.txt | ./keyvalue2quail.sh -- your-own-emacs-package.el
+➜  scripts git:(master) ✗ cat your-own-emacs-package.el 
+(quail-define-rules
+ ("u" ?的)
+ ("o" ?一)
+ ("a" ?是)
+)
+(privide 'your-own-emacs-package)
 ```
 
 
