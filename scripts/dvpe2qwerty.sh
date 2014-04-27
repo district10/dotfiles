@@ -1,5 +1,22 @@
 #!/bin/bash
 
+echo qwerty sucks, and this script will not work!
+echo "              #####    #   #  ######"
+echo "              #    #    # #   #"
+echo "              #####      #    #####"
+echo "              #    #     #    #"
+echo "              #    #     #    #"
+echo "              #####      #    ######"
+exit
+
+
+
+
+
+
+
+
+
 in=$1
 
 tmpA="${in}.tmpA"

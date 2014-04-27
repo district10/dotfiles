@@ -25,8 +25,7 @@ do
 
     if [[ $char == `echo ""` ]] # match new line
     then
-	echo $vals
-	echo $keys
+	echo ${vals} ${keys}
 	vals=""
 	keys=""
     fi
