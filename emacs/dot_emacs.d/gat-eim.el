@@ -1,6 +1,4 @@
-;; 如果你不是用的 neo-dvpe 键盘布局，请使用脚本转换下先：https://github.com/district10/dotfiles/tree/master/scripts
-
-(add-to-list 'load-path "~/.emacs.d/data/gat-tables/")
+;; 如果你不是用的 neo-dvpe 键盘布局，到这里下载特定的版本： https://github.com/district10/gat
 
 (require 'quail)
 (require 'cl)
@@ -8,12 +6,6 @@
 ;; Define Package
 (quail-define-package
  "gat-input-method" "Chinese" "Gat_Zh_")
-
-;; Load Char Tables
-;; (require 'table-0001-1000) ;; Most Common Zh Chars
-;; (load "table-0001-1000")
-;; (load "table-0001-6000")
-;; (require 'table-0001-4000)
 
 (quail-define-rules
  ("i" ?的)
@@ -6017,9 +6009,6 @@
  ("teoxu" ?鹮)
  ("teoxk" ?酞)
 )
-
-
-
 
 
 (provide 'gat-eim)
