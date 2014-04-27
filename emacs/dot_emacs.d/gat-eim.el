@@ -1,3 +1,5 @@
+;; 如果你不是用的 neo-dvpe 键盘布局，请使用脚本转换下先：https://github.com/district10/dotfiles/tree/master/scripts
+
 (add-to-list 'load-path "~/.emacs.d/data/gat-tables/")
 
 (require 'quail)
@@ -6,11 +8,6 @@
 ;; Define Package
 (quail-define-package
  "gat-input-method" "Chinese" "Gat_Zh_")
-
-
- ;; t
- ;; "Gnat's Personal Input Method" 
- ;; nil t nil nil nil nil nil nil nil nil t)
 
 ;; Load Char Tables
 ;; (require 'table-0001-1000) ;; Most Common Zh Chars
