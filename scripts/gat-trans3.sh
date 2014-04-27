@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Use this script to generate a dictionary
+#        ➜  scripts git:(master) ✗ ./gat-trans3.sh  demo.txt
+#        中国 [m][r]
+#        美国 [tli][r]
+#        发展 [ex][tsm]
+
 paragraph=$1 # get char from command line
 
 # Change it to your dict path, I use this: https://github.com/district10/dotfiles/tree/master/scripts/data/gat-dict.txt
