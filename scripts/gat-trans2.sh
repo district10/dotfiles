@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# OUtput Style:
+#     ➜  scripts git:(master) ✗ ./gat-trans2.sh "我跟你开玩笑干嘛, gat 输入法完虐拼音五笔"
+#     {我q}{跟etpt}{你too}{开tnu}{玩teinx}{笑terem}{干etmr}{嘛teiea},gat{输tjv}{入tls}{法eb}{完etci}{虐tenax}{拼teoas}{音tlj}{五etmi}{笔etiy}
+
 # [ $# -eq 0 ] && { echo "Usage: $0 <要搜的字/词语等> "; }
 
 chars=$1 # get char from command line
