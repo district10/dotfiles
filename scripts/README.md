@@ -87,6 +87,9 @@ o 一
 a 是
 ➜  scripts git:(master) ✗ head -n 3 data/gat-key-value-6000.dvp.txt | ./keyvalue2quail.sh -- your-own-emacs-package.el
 ➜  scripts git:(master) ✗ cat your-own-emacs-package.el 
+(quail-define-package
+ "gat-input-method" "Chinese" "Gat_Zh_")
+
 (quail-define-rules
  ("u" ?的)
  ("o" ?一)
