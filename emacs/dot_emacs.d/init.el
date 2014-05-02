@@ -49,15 +49,18 @@
 
 ;; Add Some Load Path
 (add-to-list 'load-path "~/.emacs.d/")
+
 (add-to-list 'load-path "~/.emacs.d/data/")
 (add-to-list 'load-path "~/.emacs.d/data/gat-tables/")
+
 (add-to-list 'load-path "~/.emacs.d/themes/")
 (add-to-list 'load-path "~/.emacs.d/themes/solarized/")
-(add-to-list 'load-path "~/.emacs.d/plugins/")
-(add-to-list 'load-path "~/.emacs.d/plugins/yasnippet/")
-(add-to-list 'load-path "~/.emacs.d/plugins/expand-region/")
-(add-to-list 'load-path "~/.emacs.d/plugins/evil")
 
+(add-to-list 'load-path "~/.emacs.d/plugins/")
+(add-to-list 'load-path "~/.emacs.d/plugins/expand-region/")
+(add-to-list 'load-path "~/.emacs.d/plugins/evil/")
+(add-to-list 'load-path "~/.emacs.d/plugins/web-mode/")
+(add-to-list 'load-path "~/.emacs.d/plugins/yasnippet/")
 
 
 ;; Auto Complete
@@ -99,7 +102,6 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
-
 ;; Cross Hair
 ;;(require 'crosshairs)
 
@@ -110,7 +112,6 @@
 
 ;; Abbrevs
 (load "abbrevs")
-
 
 ;; BookMark
 (when (require 'auto-mark nil t)
@@ -129,10 +130,8 @@
 (setq show-paren-priority 999)
 (set-face-background 'region nil)
 
-
 ;; My Keybinding Configurations
 (require 'key-bindings) ;; More-Funcs inside
-
 
 ;; Misc
 (require 'page-break-lines)
@@ -147,8 +146,7 @@
 (require 'expand-region)
 (global-set-key (kbd "C-t") 'er/expand-region)
 
-
-;;
+;; 
 (require 'flymake)
 (autoload 'flymake-find-file-hook "flymake" "" t)
 (add-hook 'find-file-hook 'flymake-find-file-hook)
@@ -158,40 +156,99 @@
 ;; My Emacs Input Method
 (require 'gat-eim)
 
-
 ;;
 (require 'line-comment-banner)
-
 
 (require 'header2)
 (add-hook 'emacs-lisp-mode-hook 'auto-make-header)
 (add-hook 'c-mode-hook 'auto-make-header)
 
-;; goto-last-change
+;; Goto-Last-Change
 (require 'goto-last-change) ;; seems great
 
-;; typopunct
+;; Typopunct
 (require 'typopunct)
 (typopunct-change-language 'english t)
 
-
+;; Undo-Tree, Used In Evil-Mode
 (require 'undo-tree)
 
-
+;; Evil-Mode, Fantastic~
 (require 'evil)
-;;(evil-mode 1)
-(global-set-key (kbd "C-n") 'evil-mode)
+(evil-mode 1)
+;;(setq evil-default-state 'emacs) 
+;;(define-key evil-emacs-state-map (kbd "C-t") 'evil-execute-in-normal-state) 
+
+;; Web-mode    http://web-mode.org/
+;; (require 'web-mode)
+;; (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.[gj]sp\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+;; (setq web-mode-engines-alist
+;;       '(("php"    . "\\.phtml\\'")
+;;         ("blade"  . "\\.blade\\."))
+;; )
 
 
-;; Set Variables
-(recentf-mode 1) ; Keep A List Of Recently Opened Files
-(electric-pair-mode 1) ; Auto generate right paren, bracket, brace
-(show-paren-mode 1)
-(setq show-paren-style 'expression) ; Highlight Entire Bracket Expression
+;; Calender + and Diary entries notification
+;;(require 'calendar+)
+;;(require 'appt)
+;;(setq appt-message-warning-time 0)      ; 0 minute time before warning
+;;(setq diary-file "~/diary")             ; diary file
 
+
+
+
+;;========================================================
+;; Set Variables 
+;;========================================================
+
+;; Keep A List Of Recently Opened Files
+(recentf-mode 1)
+
+;; Auto Generate Right Paren, Bracket, Brace
 (setq electric-pair-pairs '(
-                            (?\@ . ?\#)
+                            (?\` . ?\`)
+                            (?\中 . ?\人)
                             ))
+(electric-pair-mode 1) 
+
+;; Tabs Are Evil
+(setq-default indent-tabs-mode nil) 
+
+;; Turn On Paren Match Highlighting
+(show-paren-mode 1)
+(setq show-paren-style 'expression) ; highlight entire bracket expression
+
+;; Highlight Text Selection
+(transient-mark-mode 1) 
+
+;; Delete Seleted Text When Typing
+;;(delete-selection-mode 1) 
+
+;; Turn On Syntax Coloring
+(global-font-lock-mode 1) 
+
+;; Show Colomn Number
+(column-number-mode 1)
+
+;; Use t For True, nil For False, This is default with emacs 23. 
+;; (setq line-move-visual t) 
+
+;; 1 FOR ON, 0 FOR OFF.
+(global-visual-line-mode 1) 
+
+;; turn on highlighting current line 
+;; (global-hl-line-mode 1) , terrible
+
+
+
+
 
 
 

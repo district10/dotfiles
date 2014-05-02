@@ -33,7 +33,7 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
     ))
     
 
-;; ############################################################################
+;;==============================================================================
  (defun insert-date (prefix)
     "Insert the current date. With prefix-argument, use ISO format. With
    two prefix arguments, write out the day and month name."
@@ -45,7 +45,7 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
           (system-time-locale "en_US"))
       (insert (format-time-string format))))
     
-;; ############################################################################
+;;==============================================================================
  (require 'calendar)
   
   (defun insdate-insert-any-date (date)
@@ -64,7 +64,7 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
 
 
 
-;; ############################################################################
+;;==============================================================================
 (defun line-copy-char (&optional b)
       "Copy a character exactly below/above the point
        to the current point of the cursor (default is above)."
@@ -79,7 +79,7 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
            (insert s)))
 
 
-;; ############################################################################
+;;==============================================================================
 (defun zap-to-isearch (rbeg rend)
     "Kill the region between the mark and the closest portion of
   the isearch match string. The behaviour is meant to be analogous
@@ -108,18 +108,52 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
       (isearch-exit)
       ))
 
-;; ############################################################################
-
+;;==============================================================================
 ;; Gat, My own chinese input method
-
-
-
 (defun gat ()
   "toggle between Gat and no input method"
   (interactive)
     (if (string= current-input-method "gat-input-method")
 	(set-input-method nil)
       (set-input-method "gat-input-method")))
+
+
+;;==============================================================================
+;; Working with CSS Color Values
+(defun xah-syntax-color-hex ()
+  "Syntax color hex color spec such as 「#ff1100」 in current buffer."
+  (interactive)
+  (font-lock-add-keywords
+   nil
+   '(("#[abcdef[:digit:]]\\{6\\}"
+      (0 (put-text-property
+          (match-beginning 0)
+          (match-end 0)
+          'face (list :background (match-string-no-properties 0)))))))
+  (font-lock-fontify-buffer)
+  )
+
+(add-hook 'css-mode-hook 'xah-syntax-color-hex)
+(add-hook 'php-mode-hook 'xah-syntax-color-hex)
+(add-hook 'html-mode-hook 'xah-syntax-color-hex)
+
+
+;;==============================================================================
+;; Copied from http://wenshanren.org/?p=312
+(defun go-erc ()
+  "Log into freenode with less keystrokes"
+  (interactive)
+  (let
+      ((password-cache nil))
+    (erc
+     :server "irc.freenode.net"
+     :port "6667"
+     :nick "gnat`"                ;set your username here
+     :password (password-read (format "Your password for freenode? ")))))
+
+
+
+
 
 
 

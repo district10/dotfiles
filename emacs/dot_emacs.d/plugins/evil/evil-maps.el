@@ -40,6 +40,8 @@
 (define-key evil-normal-state-map "d" 'evil-delete)
 (define-key evil-normal-state-map "D" 'evil-delete-line)
 (define-key evil-normal-state-map "i" 'evil-insert)
+;; Added by Gnat, Space to Insert
+(define-key evil-normal-state-map " " 'evil-insert)
 (define-key evil-normal-state-map "I" 'evil-insert-line)
 (define-key evil-normal-state-map "J" 'evil-join)
 (define-key evil-normal-state-map "m" 'evil-set-marker)
@@ -177,15 +179,21 @@
 (define-key evil-motion-state-map "f" 'evil-find-char)
 (define-key evil-motion-state-map "F" 'evil-find-char-backward)
 (define-key evil-motion-state-map "G" 'evil-goto-line)
-(define-key evil-motion-state-map "h" 'evil-backward-char)
+
+;; Removed by Gnat, I have Neo-extended Dvpe~
+;; (define-key evil-motion-state-map "h" 'evil-backward-char)
+;; (define-key evil-motion-state-map "j" 'evil-next-line)
+;; (define-key evil-motion-state-map "k" 'evil-previous-line)
+;; (define-key evil-motion-state-map "l" 'evil-forward-char)
+
+;; Dont need it, remapped it to "insert"
+;;(define-key evil-motion-state-map " " 'evil-forward-char)
+
 (define-key evil-motion-state-map "H" 'evil-window-top)
-(define-key evil-motion-state-map "j" 'evil-next-line)
-(define-key evil-motion-state-map "k" 'evil-previous-line)
-(define-key evil-motion-state-map "l" 'evil-forward-char)
-(define-key evil-motion-state-map " " 'evil-forward-char)
-(define-key evil-motion-state-map "K" 'evil-lookup)
 (define-key evil-motion-state-map "L" 'evil-window-bottom)
 (define-key evil-motion-state-map "M" 'evil-window-middle)
+
+(define-key evil-motion-state-map "K" 'evil-lookup)
 (define-key evil-motion-state-map "n" 'evil-search-next)
 (define-key evil-motion-state-map "N" 'evil-search-previous)
 (define-key evil-motion-state-map "t" 'evil-find-char-to)
@@ -235,13 +243,14 @@
 (define-key evil-motion-state-map "-" 'evil-previous-line-first-non-blank)
 (define-key evil-motion-state-map "\C-w" 'evil-window-map)
 (define-key evil-motion-state-map "\C-]" 'evil-jump-to-tag)
-(define-key evil-motion-state-map (kbd "C-b") 'evil-scroll-page-up)
-(define-key evil-motion-state-map (kbd "C-d") 'evil-scroll-down)
-(define-key evil-motion-state-map (kbd "C-e") 'evil-scroll-line-down)
-(define-key evil-motion-state-map (kbd "C-f") 'evil-scroll-page-down)
+;; I don't like these  
+;;(define-key evil-motion-state-map (kbd "C-b") 'evil-scroll-page-up)
+;;(define-key evil-motion-state-map (kbd "C-d") 'evil-scroll-down)
+;;(define-key evil-motion-state-map (kbd "C-e") 'evil-scroll-line-down)
+;;(define-key evil-motion-state-map (kbd "C-f") 'evil-scroll-page-down)
+;;(define-key evil-motion-state-map (kbd "C-y") 'evil-scroll-line-up)
+;;(define-key evil-motion-state-map (kbd "RET") 'evil-ret)
 (define-key evil-motion-state-map (kbd "C-o") 'evil-jump-backward)
-(define-key evil-motion-state-map (kbd "C-y") 'evil-scroll-line-up)
-(define-key evil-motion-state-map (kbd "RET") 'evil-ret)
 (define-key evil-motion-state-map "\\" 'evil-execute-in-emacs-state)
 (define-key evil-motion-state-map "z^" 'evil-scroll-top-line-to-bottom)
 (define-key evil-motion-state-map "z+" 'evil-scroll-bottom-line-to-top)
@@ -340,7 +349,9 @@
 
 (define-key evil-operator-state-map "a" evil-outer-text-objects-map)
 (define-key evil-operator-state-map "i" evil-inner-text-objects-map)
-;; (define-key evil-operator-state-map [escape] 'keyboard-quit)
+
+;; Switch these on
+(define-key evil-operator-state-map [escape] 'keyboard-quit)
 
 ;;; Insert state
 
@@ -498,6 +509,21 @@
 (define-key evil-read-key-map (kbd "C-v") #'evil-read-quoted-char)
 (define-key evil-read-key-map (kbd "C-k") #'evil-read-digraph-char)
 (define-key evil-read-key-map "\r" "\n")
+
+
+;; Added by Me
+(define-key evil-normal-state-map "l" nil)
+(define-key evil-normal-state-map "L" nil)
+(define-key evil-motion-state-map "lu" 'universal-argument)
+(define-key key-translation-map (kbd "lh") (kbd "C-h"))
+(define-key key-translation-map (kbd "lx") (kbd "C-x"))
+(define-key key-translation-map (kbd "le") (kbd "C-e"))
+(define-key key-translation-map (kbd "lk") (kbd "C-k"))
+;; not work
+;;(define-key key-translation-map (kbd "Lx") (kbd "M-x"))
+(define-key key-translation-map (kbd "ESC") (kbd "C-g"))
+
+
 
 (provide 'evil-maps)
 
