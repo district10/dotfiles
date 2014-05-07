@@ -109,13 +109,17 @@
 (define-prefix-command 'evil-window-map)
 (define-key evil-window-map "b" 'evil-window-bottom-right)
 (define-key evil-window-map "c" 'evil-window-delete)
-(define-key evil-window-map "h" 'evil-window-left)
-(define-key evil-window-map "H" 'evil-window-move-far-left)
+;;(define-key evil-window-map "h" 'evil-window-left)
+;;(define-key evil-window-map "H" 'evil-window-move-far-left)
 (define-key evil-window-map "j" 'evil-window-down)
 (define-key evil-window-map "J" 'evil-window-move-very-bottom)
 (define-key evil-window-map "k" 'evil-window-up)
 (define-key evil-window-map "K" 'evil-window-move-very-top)
-(define-key evil-window-map "l" 'evil-window-right)
+;; (define-key evil-window-map "l" 'evil-window-right)
+;; (define-key evil-motion-state-map "l" 'evil-forward-char)
+(define-key evil-window-map "l" 'smex)
+(define-key evil-motion-state-map "l" 'smex)
+
 (define-key evil-window-map "L" 'evil-window-move-far-right)
 (define-key evil-window-map "n" 'evil-window-new)
 (define-key evil-window-map "o" 'delete-other-windows)
@@ -189,9 +193,17 @@
 ;; Dont need it, remapped it to "insert"
 ;;(define-key evil-motion-state-map " " 'evil-forward-char)
 
-(define-key evil-motion-state-map "H" 'evil-window-top)
-(define-key evil-motion-state-map "L" 'evil-window-bottom)
-(define-key evil-motion-state-map "M" 'evil-window-middle)
+;;(define-key evil-motion-state-map "H" 'evil-window-top)
+;;(define-key evil-motion-state-map "L" 'evil-window-bottom)
+;;(define-key evil-motion-state-map "M" 'evil-window-middle)
+
+;; Added by Me
+(define-key evil-normal-state-map "h" 'evil-paste-after)
+(define-key evil-normal-state-map "H" 'evil-paste-before)
+(define-key evil-motion-state-map "k" 'evil-ex)
+
+
+
 
 (define-key evil-motion-state-map "K" 'evil-lookup)
 (define-key evil-motion-state-map "n" 'evil-search-next)
@@ -269,10 +281,10 @@
 (define-key evil-motion-state-map "\C-v" 'evil-visual-block)
 (define-key evil-motion-state-map "gv" 'evil-visual-restore)
 (define-key evil-motion-state-map (kbd "C-^") 'evil-buffer)
-(define-key evil-motion-state-map [left] 'evil-backward-char)
-(define-key evil-motion-state-map [right] 'evil-forward-char)
-(define-key evil-motion-state-map [up] 'evil-previous-line)
-(define-key evil-motion-state-map [down] 'evil-next-line)
+;;(define-key evil-motion-state-map [left] 'evil-backward-char)
+;;(define-key evil-motion-state-map [right] 'evil-forward-char)
+;;(define-key evil-motion-state-map [up] 'evil-previous-line)
+;;(define-key evil-motion-state-map [down] 'evil-next-line)
 (define-key evil-motion-state-map "zl" 'evil-scroll-column-right)
 (define-key evil-motion-state-map [?z right] "zl")
 (define-key evil-motion-state-map "zh" 'evil-scroll-column-left)
@@ -512,17 +524,12 @@
 
 
 ;; Added by Me
-(define-key evil-normal-state-map "l" nil)
-(define-key evil-normal-state-map "L" nil)
-(define-key evil-motion-state-map "lu" 'universal-argument)
-(define-key key-translation-map (kbd "lh") (kbd "C-h"))
-(define-key key-translation-map (kbd "lx") (kbd "C-x"))
-(define-key key-translation-map (kbd "le") (kbd "C-e"))
-(define-key key-translation-map (kbd "lk") (kbd "C-k"))
-;; not work
-;;(define-key key-translation-map (kbd "Lx") (kbd "M-x"))
+;;(define-key evil-normal-state-map "l" nil)
+;;(define-key key-translation-map (kbd "le") (kbd "C-e"))
 (define-key key-translation-map (kbd "ESC") (kbd "C-g"))
 
+;; not work
+;;(define-key key-translation-map (kbd "Lx") (kbd "M-x"))
 
 
 (provide 'evil-maps)
