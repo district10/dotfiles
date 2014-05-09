@@ -67,9 +67,15 @@
 ;; Auto Complete
 (require 'ac)
 
+
+;; Ido mode
+(require 'ido)
+(ido-mode t)
+
 ;; Smex, I use "C-e" instead of "M-x"
 (require 'smex)
 (global-set-key (kbd "C-e") 'smex)
+(global-set-key (kbd "M-x") 'smex)
 (defadvice smex (around space-inserts-hyphen activate compile)
         (let ((ido-cannot-complete-command
                `(lambda ()
@@ -190,6 +196,34 @@
                 (set-face-background 'mode-line (car color))
                 (set-face-foreground 'mode-line (cdr color))))))
 
+(defun evil-toggle-input-method ()
+      "when toggle on input method, switch to evil-insert-state if possible.
+    when toggle off input method, switch to evil-normal-state if current state is evil-insert-state"
+      (interactive)
+      (if (not current-input-method)
+          (if (not (string= evil-state "insert"))
+              (evil-insert-state))
+        (if (string= evil-state "insert")
+            (evil-normal-state)
+            ))
+      (toggle-input-method))
+    
+    (global-set-key (kbd "C-\\") 'evil-toggle-input-method) ;; disturbingly good~ 
+
+(global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
+(global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
+
+
+
+
+
+
+
+;; Load Org-mode settings
+(require 'org-setup)
+
+;; Fold HTML code
+(autoload 'html-fold-mode "html-fold" "Minor mode for hiding and revealing elements." t)
 
 
 
@@ -264,8 +298,8 @@
 ;; turn on highlighting current line 
 ;; (global-hl-line-mode 1) , terrible
 
-
-
+;; Make RET follows link, this will be better
+(setq org-return-follows-link t)
 
 
 

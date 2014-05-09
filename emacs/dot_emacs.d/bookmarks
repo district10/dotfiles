@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("cross"
+(("org-capture-last-stored"
+ (filename . "~/Desktop/emacs/data/org/gtd.org")
+ (front-context-string . "** TODO shit\n \n ")
+ (rear-context-string)
+ (position . 9))
+("cross"
  (filename . "~/Desktop/district10/dotfiles/emacs/dot_emacs.d/plugins/crosshairs.el")
  (front-context-string . ";;; crosshairs.e")
  (rear-context-string)

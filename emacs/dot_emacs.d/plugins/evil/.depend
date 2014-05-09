@@ -33,9 +33,6 @@ evil-macros.elc: evil-repeat.elc
 evil-maps.elc: evil-states.elc
 evil-maps.elc: evil-ex.elc
 evil-maps.elc: evil-commands.elc
-evil-maps-me.elc: evil-states.elc
-evil-maps-me.elc: evil-ex.elc
-evil-maps-me.elc: evil-commands.elc
 evil-repeat.elc: evil-states.elc
 evil-search.elc: evil-common.elc
 evil-search.elc: evil-ex.elc

@@ -118,6 +118,11 @@
 (require 'evil-maps)
 (require 'evil-integration)
 
+;; Added by Gnat
+(require 'evil-numbers)
+(require 'evil-surround)
+
+
 (run-hooks 'evil-after-load-hook)
 
 (provide 'evil)

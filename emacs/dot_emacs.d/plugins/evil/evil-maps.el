@@ -526,6 +526,7 @@
 ;; Added by Me
 ;;(define-key evil-normal-state-map "l" nil)
 ;;(define-key key-translation-map (kbd "le") (kbd "C-e"))
+;;(define-key evil-normal-state-map "c" nil)
 (define-key key-translation-map (kbd "ESC") (kbd "C-g"))
 
 ;; not work
