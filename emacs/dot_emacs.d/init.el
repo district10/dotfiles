@@ -222,6 +222,7 @@
 ;; Load Org-mode settings
 (require 'org-setup)
 
+
 ;; Fold HTML code
 (autoload 'html-fold-mode "html-fold" "Minor mode for hiding and revealing elements." t)
 

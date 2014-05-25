@@ -1,0 +1,32 @@
+unmapAll
+
+# Build on dvpe keyboard layout
+# If you don't use it
+# You should customize it yourself
+
+map e scrollPageDown
+map . scrollPageUp
+map o previousTab
+map i nextTab
+
+map k removeTab
+map K restoreTab
+
+map c copyCurrentUrl
+map v LinkHints.activateModetoCopyLinkUrl
+
+map r LinkHints.activateModeToOpenInNewTab
+
+
+map t Vomnibar.activate
+map T Vomnibar.activateInNewTab
+
+# Dont need it
+#map u Vomnibar.activateTabSelection
+map b Vomnibar.activateBookmarks
+map B Vomnibar.activateBookmarksInNewTab
+map q goPrevious
+map j goNext
+
+map a goBack
+map u goForward

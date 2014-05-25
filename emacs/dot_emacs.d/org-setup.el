@@ -61,6 +61,28 @@
 ;;              (sequence "|" "CANCELED")))                        ;;
 ;; 
 
+;; Org-mode Protocol
+;;(server-start)
+;;(require 'org-protocol)
+
+;; For org-mode
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cc" 'org-capture)   
+(global-set-key "\C-ca" 'org-agenda)    
+(global-set-key "\C-cb" 'org-iswitchb)  
+
+
+(setq org-protocol-default-template-key "l")
+(setq org-capture-templates
+ '(("t" "Todo" entry (file+headline "/root/Desktop/emacs/data/org/notes.org" "Tasks")
+        "* TODO %?\n  %i\n  %a")
+   ("l" "Link" entry (file+olp "/root/Desktop/emacs/data/org/notes.org" "Web Links")
+        "* %a\n %?\n %i")
+   ("j" "Journal" entry (file+datetree "/root/Desktop/emacs/data/org/notes.org")
+        "* %?\nEntered on %U\n  %i\n  %a")))
+
+
+
 
 
 (setq org-todo-keywords
@@ -94,7 +116,8 @@
               "http://rss.slashdot.org/Slashdot/slashdot"
               "/root/Desktop/emacs/data/org/feeds.org" "Slashdot Entries")))
 
-
+;; In order to include entries from the Emacs diary into Org mode's agenda, you only need to customize the variable
+(setq org-agenda-include-diary t)
 
 
 
