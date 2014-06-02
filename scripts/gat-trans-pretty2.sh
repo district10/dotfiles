@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# OUtput Style:
+# Output Style:
 #          ➜  scripts git:(master) ✗ ./gat-trans-pretty2.sh "我跟你开玩笑干嘛, gat 输入法完虐拼音五笔"
 #          {我q}{跟4pt}{你3oo}{开3nu}{玩5inx}{笑5rem}{干4mr}{嘛5iea},gat{输3jv}{入3ls}{法2b}{完4ci}{虐5nax}{拼5oas}{音3lj}{五4mi}{笔4iy}
 
